@@ -8,7 +8,8 @@ import SearchBar from './components/SearchBar';
 
 import './App.css';
 
-const API_KEY = '7266b360f66abb8bd93a246e8a3302c0';
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 
 function App() {
   const [movies, setMovies] = useState([]); // List of popular movies
