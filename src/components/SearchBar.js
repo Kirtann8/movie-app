@@ -1,4 +1,3 @@
-// components/SearchBar.js
 import React, { useState } from 'react';
 
 function SearchBar({ onSearch }) {
@@ -15,7 +14,7 @@ function SearchBar({ onSearch }) {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Movie search karo..."
+        placeholder="Search for movies..."
       />
       <button type="submit">Search</button>
     </form>
