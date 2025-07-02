@@ -1,4 +1,3 @@
-// utils/localStorage.js (Updated)
 export const getFavorites = () => {
   try {
     const data = localStorage.getItem('favorites');

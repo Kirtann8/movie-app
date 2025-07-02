@@ -1,4 +1,3 @@
-// hooks/useFavorites.js
 import { useState, useEffect } from 'react';
 import { getFavorites, addToFavorites, removeFromFavorites } from '../utils/localStorage';
 

@@ -12,14 +12,14 @@ describe('useDebounce', () => {
   });
 
   it('returns initial value immediately', () => {
-    const { result } = renderHook(() => useDebounce('initial', 500));
+    const { result } = renderHook(() => useDebounce('initial', 300));
     expect(result.current).toBe('initial');
   });
 
   it('debounces value updates', () => {
     const { result, rerender } = renderHook(
       ({ value, delay }) => useDebounce(value, delay),
-      { initialProps: { value: 'initial', delay: 500 } }
+      { initialProps: { value: 'initial', delay: 300 } }
     );
 
     // Initial value
@@ -32,7 +32,7 @@ describe('useDebounce', () => {
     expect(result.current).toBe('initial');
 
     // Fast forward time
-    jest.advanceTimersByTime(500);
+    jest.advanceTimersByTime(300);
 
     // Now the value should be updated
     expect(result.current).toBe('updated');
@@ -53,7 +53,7 @@ describe('useDebounce', () => {
   });
 
   it('cleans up timeout on unmount', () => {
-    const { unmount } = renderHook(() => useDebounce('test', 500));
+    const { unmount } = renderHook(() => useDebounce('test', 300));
     
     unmount();
     
@@ -63,7 +63,7 @@ describe('useDebounce', () => {
 
   it('handles multiple rapid value changes', () => {
     const { result, rerender } = renderHook(
-      ({ value }) => useDebounce(value, 500),
+      ({ value }) => useDebounce(value, 300),
       { initialProps: { value: 'initial' } }
     );
 

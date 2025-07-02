@@ -1,4 +1,3 @@
-// hooks/useMovies.js
 import { useState, useEffect, useCallback } from 'react';
 import { movieService } from '../services/movieService';
 

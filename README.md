@@ -1,4 +1,4 @@
-# 🎬 Movie Search App
+#  Movie Search App
 
 A modern React application for discovering and managing your favorite movies using The Movie Database (TMDb) API.
 
@@ -48,23 +48,36 @@ npm run test:coverage
 
 ##  Project Structure
 
+public/
 src/
-├── components/
-│ ├── MovieCard.js
-│ ├── SearchBar.js
-│ ├── FavoriteIndicator.js
-│ ├── FavoritesModal.js
-│ ├── Header.js
-│ └── MovieList.js
-├── hooks/
-│ ├── useFavorites.js
-│ ├── useMovies.js
-│ └── useDebounce.js
-├── services/
-│ └── movieService.js
-├── utils/
-│ └── localStorage.js
-└── App.js
+  components/
+    __tests__/
+      MovieCard.test.js
+      SearchBar.test.js
+    EmptyState.js
+    FavoriteIndicator.js
+    FavoritesModal.js
+    LoadingIndicator.js
+    MovieCard.js
+    MovieList.js
+    Pagination.js
+    SearchBar.js
+  hooks/
+    __tests__/
+      useDebounce.test.js
+      useFavorites.test.js
+      useMovies.test.js
+    useDebounce.js
+    useFavorites.js
+    useMovies.js
+  services/
+    __tests__/
+      movieService.test.js
+    movieService.js
+  utils/
+    localStorage.js
+  App.js
+
 
 
 

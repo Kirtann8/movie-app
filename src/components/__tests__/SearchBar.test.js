@@ -3,9 +3,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import SearchBar from '../SearchBar';
 
-// Mock the useDebounce hook
 jest.mock('../../hooks/useDebounce', () => ({
-  useDebounce: (value) => value // Return the value immediately for testing
+  useDebounce: (value) => value 
 }));
 
 describe('SearchBar', () => {
