@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# 🎬 Movie Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for discovering and managing your favorite movies using The Movie Database (TMDb) API.
 
-## Available Scripts
+##  Features
 
-In the project directory, you can run:
+- **Movie Discovery**: Browse popular movies with infinite scroll
+- **Smart Search**: Real-time movie search with debounced input
+- **Favorites Management**: Add/remove movies from your personal favorites list
+- **Responsive Design**: Optimized for all device sizes using Tailwind CSS
+- **Accessibility**: Full keyboard navigation and screen reader support
+- **Persistent Storage**: Favorites saved in localStorage
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 18, Tailwind CSS
+- **State Management**: Custom hooks (useFavorites, useMovies, useDebounce)
+- **API**: The Movie Database (TMDb) API
+- **Testing**: Jest, React Testing Library
+- **Icons**: React Icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Installation
 
-### `npm test`
+1. Clone the repository:
+https://github.com/Kirtann8/movie-app.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+2. Install dependencies:
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Create a `.env` file and add your TMDb API key:
+REACT_APP_API_KEY=your_tmdb_api_key
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+4. Start the development server:
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Testing
+Run tests: 
+npm test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run tests with coverage:
+npm run test:coverage
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##  Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+src/
+├── components/
+│ ├── MovieCard.js
+│ ├── SearchBar.js
+│ ├── FavoriteIndicator.js
+│ ├── FavoritesModal.js
+│ ├── Header.js
+│ └── MovieList.js
+├── hooks/
+│ ├── useFavorites.js
+│ ├── useMovies.js
+│ └── useDebounce.js
+├── services/
+│ └── movieService.js
+├── utils/
+│ └── localStorage.js
+└── App.js
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Key Features Implementation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Debounced Search
+- Implements custom `useDebounce` hook for optimized API calls
+- 500ms delay to prevent excessive requests
 
-### Making a Progressive Web App
+### Favorites Management
+- Persistent storage using localStorage
+- Custom `useFavorites` hook for state management
+- Add/remove functionality with visual feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Accessibility
+- ARIA labels and roles
+- Keyboard navigation support
+- Screen reader friendly
+- Focus management
 
-### Advanced Configuration
+##  Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `npm start` - Development server
+- `npm test` - Run tests
+- `npm run build` - Production build
+- `npm run test:coverage` - Test coverage report
 
-### Deployment
+##  Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app is fully responsive with breakpoints:
+- Mobile: < 640px
+- Tablet: 640px - 1024px  
+- Desktop: > 1024px
 
-### `npm run build` fails to minify
+##  Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
