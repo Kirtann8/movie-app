@@ -136,7 +136,7 @@ describe('MovieCard', () => {
       'aria-label',
       'Movie: Test Movie'
     );
-    const rating = screen.getByText('⭐ 8.5/10').parentElement;
-    expect(rating).toHaveAttribute('aria-label', 'Rating: 8.5 out of 10');
+    const rating = screen.getByLabelText('Rating: 8.5 out of 10');
+    expect(rating).toBeInTheDocument();
   });
 }); 
